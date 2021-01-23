@@ -21,11 +21,14 @@ public final class TargetsListViewController: UIViewController, StoryboardInstan
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         setupViews()
         bind(to: viewModel)
     }
     
     private func setupViews() {
+        view.backgroundColor = UIColor.appBackground
+        tableView.backgroundColor = UIColor.appBackground
         tableView.delegate = self
         tableView.dataSource = self
     }

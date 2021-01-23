@@ -17,20 +17,36 @@ public final class TargetsListItemCell: UITableViewCell {
     public weak var delegate: TargetsListItemCellDelegate?
     static let reuseIdentifier = String(describing: TargetsListItemCell.self)
     
+    @IBOutlet private weak var neumorphicViewContainer: NeumorphicView!
     @IBOutlet private weak var targetTitleLabel: UILabel!
-    @IBOutlet private weak var targetSelectedSwitch: UISwitch!
+    @IBOutlet private weak var checkMarkImageView: UIImageView!
 
     private var viewModel: TargetsListItemViewModel!
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        contentView.backgroundColor = .clear
+        contentView.clipsToBounds = false
+        backgroundColor = .clear
+        clipsToBounds = false
+    }
 
     func configure(with viewModel: TargetsListItemViewModel) {
         self.viewModel = viewModel
         
         targetTitleLabel.text = viewModel.title
-        targetSelectedSwitch.isOn = viewModel.selected
+        checkMarkImageView.isHidden = !viewModel.selected
+        neumorphicViewContainer.updateLayers(pressed: viewModel.selected)
     }
     
-    @IBAction private func didChangeSwitchValue() {
-        viewModel.selected = targetSelectedSwitch.isOn
-        delegate?.didChangeSelectedValue(for: viewModel, with: targetSelectedSwitch.isOn)
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        neumorphicViewContainer.updateLayers(pressed: true)
+    }
+    
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        viewModel.selected = !viewModel.selected
+        checkMarkImageView.isHidden = !viewModel.selected
+        neumorphicViewContainer.updateLayers(pressed: viewModel.selected)
+        delegate?.didChangeSelectedValue(for: viewModel, with: viewModel.selected)
     }
 }
