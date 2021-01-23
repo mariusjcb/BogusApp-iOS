@@ -7,8 +7,10 @@
 
 import UIKit
 import SwiftUI
+import BogusApp_Common_Models
 import BogusApp_Common_Networking
 import BogusApp_Features_TargetsList
+import BogusApp_Features_ChannelsList
 
 final class TargetsSceneDIContainer {
     
@@ -40,6 +42,15 @@ final class TargetsSceneDIContainer {
     
     func makeTargetsListViewModel(actions: TargetsListViewModelActions) -> TargetsListViewModel {
         return DefaultTargetsListViewModel(fetchTargetsListUseCase: makeFetchTargetsListUseCase(), actions: actions)
+    }
+    
+    func makeChannelsListViewController(for targets: [TargetSpecific],
+                                        actions: ChannelsListViewModelActions) -> ChannelsListViewController {
+        return ChannelsListViewController.create(with: makeChannelsListViewModel(for: targets, actions: actions))
+    }
+    
+    func makeChannelsListViewModel(for targets: [TargetSpecific], actions: ChannelsListViewModelActions) -> ChannelsListViewModel {
+        return DefaultChannelsListViewModel(targets: targets, actions: actions)
     }
     
     // MARK: - Flow Coordinators

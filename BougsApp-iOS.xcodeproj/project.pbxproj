@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A405C8125BCB95800C2D753 /* BogusApp-Features-ChannelsList in Frameworks */ = {isa = PBXBuildFile; productRef = 7A405C8025BCB95800C2D753 /* BogusApp-Features-ChannelsList */; };
+		7A405C8A25BCB9F100C2D753 /* ChannelsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A405C8925BCB9F100C2D753 /* ChannelsListViewController.storyboard */; };
+		7A405C8F25BCBD4600C2D753 /* ChannelsListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A405C8E25BCBD4600C2D753 /* ChannelsListItemCell.swift */; };
+		7A405C9425BCBE5400C2D753 /* ChannelsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A405C9325BCBE5400C2D753 /* ChannelsListViewController.swift */; };
 		7A59020325BB01A300D20DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59020225BB01A300D20DCD /* AppDelegate.swift */; };
 		7A59020525BB01A300D20DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59020425BB01A300D20DCD /* SceneDelegate.swift */; };
 		7A59020D25BB01A300D20DCD /* BougsApp_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A59020B25BB01A300D20DCD /* BougsApp_iOS.xcdatamodeld */; };
@@ -50,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A405C8925BCB9F100C2D753 /* ChannelsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChannelsListViewController.storyboard; sourceTree = "<group>"; };
+		7A405C8E25BCBD4600C2D753 /* ChannelsListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsListItemCell.swift; sourceTree = "<group>"; };
+		7A405C9325BCBE5400C2D753 /* ChannelsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsListViewController.swift; sourceTree = "<group>"; };
 		7A5901FF25BB01A300D20DCD /* BougsApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BougsApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A59020225BB01A300D20DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A59020425BB01A300D20DCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +72,6 @@
 		7A59022925BB01A600D20DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A6F346E25BC6788001158E7 /* NeumorphicViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicViews.swift; sourceTree = "<group>"; };
 		7A6F347625BC69DE001158E7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		7A6F34A025BC73ED001158E7 /* BougsApp-iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BougsApp-iOS copy-Info.plist"; path = "/Users/mariusjcb/Documents/Developer/BogusApp/BogusApp-iOS/BougsApp-iOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		7ACF6E5125BB979F005138EF /* TargetsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TargetsListViewController.storyboard; sourceTree = "<group>"; };
 		7ACF6E5625BB990D005138EF /* TargetsListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsListItemCell.swift; sourceTree = "<group>"; };
 		7ACF6E5B25BB9B84005138EF /* TargetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsListViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 				7A6F344525BC0E40001158E7 /* BogusApp-Common-Networking in Frameworks */,
 				7A6F342A25BC0DB4001158E7 /* BogusApp-Common-Utils in Frameworks */,
 				7A6F342125BC0CDA001158E7 /* BogusApp-Common-Models in Frameworks */,
+				7A405C8125BCB95800C2D753 /* BogusApp-Features-ChannelsList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,11 +114,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A405C8825BCB9DE00C2D753 /* ChannelsList */ = {
+			isa = PBXGroup;
+			children = (
+				7A405C8925BCB9F100C2D753 /* ChannelsListViewController.storyboard */,
+				7A405C8E25BCBD4600C2D753 /* ChannelsListItemCell.swift */,
+				7A405C9325BCBE5400C2D753 /* ChannelsListViewController.swift */,
+			);
+			path = ChannelsList;
+			sourceTree = "<group>";
+		};
 		7A4C603525BB029400573D38 /* TargetsList */ = {
 			isa = PBXGroup;
 			children = (
-				7ACF6E7125BBA543005138EF /* TargetsSceneDIContainer.swift */,
-				7ACF6E6525BBA327005138EF /* TargetsListFlowCoordinator.swift */,
 				7ACF6E5125BB979F005138EF /* TargetsListViewController.storyboard */,
 				7ACF6E5625BB990D005138EF /* TargetsListItemCell.swift */,
 				7ACF6E5B25BB9B84005138EF /* TargetsListViewController.swift */,
@@ -137,7 +152,6 @@
 				7A59021B25BB01A600D20DCD /* BougsApp-iOSTests */,
 				7A59022625BB01A600D20DCD /* BougsApp-iOSUITests */,
 				7A59020025BB01A300D20DCD /* Products */,
-				7A6F34A025BC73ED001158E7 /* BougsApp-iOS copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				7ACF6E8925BBA94C005138EF /* Application */,
+				7A405C8825BCB9DE00C2D753 /* ChannelsList */,
 				7A4C603525BB029400573D38 /* TargetsList */,
 				7A4C604D25BB04D900573D38 /* Utils */,
 				7A6F341825BC0C3D001158E7 /* Supporting Files */,
@@ -199,6 +214,8 @@
 				7ACF6E9225BBA972005138EF /* AppConfiguration.swift */,
 				7ACF6E8A25BBA964005138EF /* AppDIContainer.swift */,
 				7ACF6E9A25BBAAF0005138EF /* AppFlowCoordinator.swift */,
+				7ACF6E7125BBA543005138EF /* TargetsSceneDIContainer.swift */,
+				7ACF6E6525BBA327005138EF /* TargetsListFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -224,6 +241,7 @@
 				7A6F342925BC0DB4001158E7 /* BogusApp-Common-Utils */,
 				7A6F344425BC0E40001158E7 /* BogusApp-Common-Networking */,
 				7A6F344D25BC107B001158E7 /* BogusApp-Features-TargetsList */,
+				7A405C8025BCB95800C2D753 /* BogusApp-Features-ChannelsList */,
 			);
 			productName = "BougsApp-iOS";
 			productReference = 7A5901FF25BB01A300D20DCD /* BougsApp-iOS.app */;
@@ -301,6 +319,7 @@
 				7A6F342825BC0DB4001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Common-Utils" */,
 				7A6F344325BC0E40001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Common-Networking" */,
 				7A6F344C25BC107B001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Features-TargetsList" */,
+				7A405C7F25BCB95800C2D753 /* XCRemoteSwiftPackageReference "BogusApp-Features-ChannelsList" */,
 			);
 			productRefGroup = 7A59020025BB01A300D20DCD /* Products */;
 			projectDirPath = "";
@@ -321,6 +340,7 @@
 				7ACF6E5225BB979F005138EF /* TargetsListViewController.storyboard in Resources */,
 				7A59021225BB01A500D20DCD /* LaunchScreen.storyboard in Resources */,
 				7A59020F25BB01A500D20DCD /* Assets.xcassets in Resources */,
+				7A405C8A25BCB9F100C2D753 /* ChannelsListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,8 +367,10 @@
 			files = (
 				7ACF6E8B25BBA964005138EF /* AppDIContainer.swift in Sources */,
 				7ACF6E7225BBA543005138EF /* TargetsSceneDIContainer.swift in Sources */,
+				7A405C9425BCBE5400C2D753 /* ChannelsListViewController.swift in Sources */,
 				7ACF6E8525BBA815005138EF /* StoryboardInstantiable.swift in Sources */,
 				7A59020D25BB01A300D20DCD /* BougsApp_iOS.xcdatamodeld in Sources */,
+				7A405C8F25BCBD4600C2D753 /* ChannelsListItemCell.swift in Sources */,
 				7A59020325BB01A300D20DCD /* AppDelegate.swift in Sources */,
 				7ACF6E5725BB990D005138EF /* TargetsListItemCell.swift in Sources */,
 				7ACF6E9325BBA972005138EF /* AppConfiguration.swift in Sources */,
@@ -685,6 +707,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7A405C7F25BCB95800C2D753 /* XCRemoteSwiftPackageReference "BogusApp-Features-ChannelsList" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "../Features/BogusApp-Features-ChannelsList";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		7A6F341F25BC0CDA001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Common-Models" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "../Common/BogusApp-Common-Models";
@@ -720,6 +750,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7A405C8025BCB95800C2D753 /* BogusApp-Features-ChannelsList */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A405C7F25BCB95800C2D753 /* XCRemoteSwiftPackageReference "BogusApp-Features-ChannelsList" */;
+			productName = "BogusApp-Features-ChannelsList";
+		};
 		7A6F342025BC0CDA001158E7 /* BogusApp-Common-Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7A6F341F25BC0CDA001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Common-Models" */;
