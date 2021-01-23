@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import BogusApp_Common_Networking
 
 final class AppDIContainer {
     
@@ -13,7 +14,7 @@ final class AppDIContainer {
     
     // MARK: - Network
     lazy var dataTransferService: DataTransferService = {
-        let config = ApiDataNetworkConfig(baseURL: URL(string: appConfiguration.baseURL)!)
+        let config = DefaultNetworkConfiguration(baseURL: URL(string: appConfiguration.baseURL)!)
         let apiDataNetwork = DefaultNetworkService(config: config)
         return DefaultDataTransferService(with: apiDataNetwork)
     }()

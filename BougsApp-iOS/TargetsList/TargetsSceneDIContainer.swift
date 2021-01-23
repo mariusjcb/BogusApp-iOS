@@ -7,6 +7,8 @@
 
 import UIKit
 import SwiftUI
+import BogusApp_Common_Networking
+import BogusApp_Features_TargetsList
 
 final class TargetsSceneDIContainer {
     

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BogusApp_Features_TargetsList
 
 public final class TargetsListViewController: UIViewController, StoryboardInstantiable, Alertable, UITableViewDelegate, UITableViewDataSource {
     var viewModel: TargetsListViewModel!

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BogusApp_Features_TargetsList
 
 public protocol TargetsListItemCellDelegate: class {
     func didChangeSelectedValue(for viewModel: TargetsListItemViewModel, with value: Bool)

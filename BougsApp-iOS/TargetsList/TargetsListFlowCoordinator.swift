@@ -7,6 +7,7 @@
 
 import UIKit
 import BogusApp_Common_Models
+import BogusApp_Features_TargetsList
 
 public protocol TargetsListFlowCoordinatorDependencies {
     func makeTargetsListViewController(actions: TargetsListViewModelActions) -> TargetsListViewController
