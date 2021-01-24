@@ -11,6 +11,8 @@ import BogusApp_Common_Models
 import BogusApp_Common_Networking
 import BogusApp_Features_TargetsList
 import BogusApp_Features_ChannelsList
+import BogusApp_Features_PlansList
+import BogusApp_Features_CampaignReview
 
 final class TargetsSceneDIContainer {
     
@@ -51,6 +53,28 @@ final class TargetsSceneDIContainer {
     
     func makeChannelsListViewModel(for targets: [TargetSpecific], actions: ChannelsListViewModelActions) -> ChannelsListViewModel {
         return DefaultChannelsListViewModel(targets: targets, actions: actions)
+    }
+    
+    func makePlansListViewController(for channel: Channel, plans: [Plan], didSelect: @escaping (Int) -> Void) -> PlansListViewController {
+        return PlansListViewController.create(with: makePlansListViewModel(for: channel, plans: plans, didSelect: didSelect))
+    }
+    
+    func makePlansListViewModel(for channel: Channel, plans: [Plan], didSelect: @escaping (Int) -> Void) -> PlansListViewModel {
+        return DefaultPlansListViewModel(for: channel, plans: plans, didSelect: didSelect)
+    }
+    
+    func makeCampaignReviewViewController(for targets: [TargetSpecific],
+                                          selectedPlans: [(Channel, Int)],
+                                          actions: CampaignReviewViewModelActions) -> CampaignReviewViewController {
+        return CampaignReviewViewController.create(with: makeCampaignReviewViewModel(for: targets,
+                                                                                     selectedPlans: selectedPlans,
+                                                                                     actions: actions))
+    }
+    
+    func makeCampaignReviewViewModel(for targets: [TargetSpecific],
+                                     selectedPlans: [(Channel, Int)],
+                                     actions: CampaignReviewViewModelActions) -> CampaignReviewViewModel {
+        return DefaultCampaignReviewViewModel(targets: targets, selectedPlans: selectedPlans, actions: actions)
     }
     
     // MARK: - Flow Coordinators

@@ -40,7 +40,7 @@ public final class TargetsListItemCell: UITableViewCell {
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        neumorphicViewContainer.updateLayers(pressed: true)
+        neumorphicViewContainer.updateLayers(pressed: viewModel.selected)
     }
     
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

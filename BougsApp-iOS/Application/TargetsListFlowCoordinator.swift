@@ -6,13 +6,20 @@
 //
 
 import UIKit
+import MessageUI
 import BogusApp_Common_Models
 import BogusApp_Features_TargetsList
 import BogusApp_Features_ChannelsList
+import BogusApp_Features_PlansList
+import BogusApp_Features_CampaignReview
 
 public protocol TargetsListFlowCoordinatorDependencies {
     func makeTargetsListViewController(actions: TargetsListViewModelActions) -> TargetsListViewController
     func makeChannelsListViewController(for targets: [TargetSpecific], actions: ChannelsListViewModelActions) -> ChannelsListViewController
+    func makePlansListViewController(for channel: Channel, plans: [Plan], didSelect: @escaping (Int) -> Void) -> PlansListViewController
+    func makeCampaignReviewViewController(for targets: [TargetSpecific],
+                                          selectedPlans: [(Channel, Int)],
+                                          actions: CampaignReviewViewModelActions) -> CampaignReviewViewController
 }
 
 public final class TargetsListFlowCoordinator {
@@ -41,11 +48,27 @@ public final class TargetsListFlowCoordinator {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private func showPlansSelector(_ plans: [Plan], _ didSelect: @escaping (Int) -> Void) {
-        didSelect(1)
+    private func showPlansSelector(_ channel: Channel, _ plans: [Plan], _ didSelect: @escaping (Int) -> Void) {
+        let vc = dependencies.makePlansListViewController(for: channel, plans: plans, didSelect: didSelect)
+        vc.viewModel.didSelect = { index in
+            didSelect(index)
+            vc.dismiss(animated: true)
+        }
+        navigationController?.present(vc, animated: true)
     }
     
     private func showCampaignReview(_ targets: [TargetSpecific], selectedPlans: [(Channel, Int)]) {
-        fatalError("WORKS")
+        let actions = CampaignReviewViewModelActions(sendEmail: sendEmail)
+        let vc = dependencies.makeCampaignReviewViewController(for: targets, selectedPlans: selectedPlans, actions: actions)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func sendEmail(_ toEmail: String, _ message: String) {
+        guard MFMailComposeViewController.canSendMail() else { return }
+        let mail = MFMailComposeViewController()
+        mail.mailComposeDelegate = mail
+        mail.setToRecipients([toEmail])
+        mail.setMessageBody(message, isHTML: false)
+        navigationController?.present(mail, animated: true)
     }
 }

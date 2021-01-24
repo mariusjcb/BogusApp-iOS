@@ -12,6 +12,8 @@ public final class TargetsListViewController: UIViewController, StoryboardInstan
     var viewModel: TargetsListViewModel!
     
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var emptyView: UIView!
+    @IBOutlet private weak var loadingView: UIView!
     
     static func create(with viewModel: TargetsListViewModel) -> TargetsListViewController {
         let vc = TargetsListViewController.instantiateViewController()
@@ -21,9 +23,13 @@ public final class TargetsListViewController: UIViewController, StoryboardInstan
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
         setupViews()
         bind(to: viewModel)
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func setupViews() {
@@ -33,13 +39,20 @@ public final class TargetsListViewController: UIViewController, StoryboardInstan
         tableView.dataSource = self
     }
     
+    private func updateData() {
+        emptyView.isHidden = !viewModel.itemsObservable.wrappedValue.isEmpty
+        tableView.reloadData()
+    }
+    
     private func bind(to viewModel: TargetsListViewModel) {
-        viewModel.itemsObservable.observe(on: self) { [weak self] _ in self?.tableView.reloadData() }
+        viewModel.itemsObservable.observe(on: self) { [weak self] _ in self?.updateData() }
         viewModel.errorObservable.observe(on: self) { [weak self] in self?.showError($0) }
+        viewModel.loadingObservable.observe(on: self) { [weak self] in self?.loadingView.isHidden = !$0 }
     }
     
     private func showError(_ error: String) {
         guard !error.isEmpty else { return }
+        emptyView.isHidden = false
         showAlert(message: error)
     }
     

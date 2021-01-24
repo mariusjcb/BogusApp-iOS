@@ -11,6 +11,7 @@ import BogusApp_Features_ChannelsList
 public final class ChannelsListViewController: UIViewController, StoryboardInstantiable, Alertable, UITableViewDelegate, UITableViewDataSource {
     var viewModel: ChannelsListViewModel!
     
+    @IBOutlet private weak var emptyStateView: UIView!
     @IBOutlet private weak var tableView: UITableView!
     
     static func create(with viewModel: ChannelsListViewModel) -> ChannelsListViewController {
@@ -21,9 +22,13 @@ public final class ChannelsListViewController: UIViewController, StoryboardInsta
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
         setupViews()
         bind(to: viewModel)
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func setupViews() {
@@ -33,8 +38,13 @@ public final class ChannelsListViewController: UIViewController, StoryboardInsta
         tableView.dataSource = self
     }
     
+    private func updateData() {
+        emptyStateView.isHidden = !viewModel.itemsObservable.wrappedValue.isEmpty
+        tableView.reloadData()
+    }
+    
     private func bind(to viewModel: ChannelsListViewModel) {
-        viewModel.itemsObservable.observe(on: self) { [weak self] _ in self?.tableView.reloadData() }
+        viewModel.itemsObservable.observe(on: self) { [weak self] _ in self?.updateData() }
         viewModel.errorObservable.observe(on: self) { [weak self] in self?.showError($0) }
     }
     
