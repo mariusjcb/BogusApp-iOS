@@ -18,7 +18,6 @@
 		7A52722225BCE1F300FD7D12 /* PlansListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A52722125BCE1F300FD7D12 /* PlansListViewController.swift */; };
 		7A59020325BB01A300D20DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59020225BB01A300D20DCD /* AppDelegate.swift */; };
 		7A59020525BB01A300D20DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59020425BB01A300D20DCD /* SceneDelegate.swift */; };
-		7A59020D25BB01A300D20DCD /* BougsApp_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A59020B25BB01A300D20DCD /* BougsApp_iOS.xcdatamodeld */; };
 		7A59020F25BB01A500D20DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A59020E25BB01A500D20DCD /* Assets.xcassets */; };
 		7A59021225BB01A500D20DCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A59021025BB01A500D20DCD /* LaunchScreen.storyboard */; };
 		7A59021D25BB01A600D20DCD /* BougsApp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59021C25BB01A600D20DCD /* BougsApp_iOSTests.swift */; };
@@ -74,7 +73,6 @@
 		7A5901FF25BB01A300D20DCD /* BougsApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BougsApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A59020225BB01A300D20DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A59020425BB01A300D20DCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7A59020C25BB01A300D20DCD /* BougsApp_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BougsApp_iOS.xcdatamodel; sourceTree = "<group>"; };
 		7A59020E25BB01A500D20DCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A59021125BB01A500D20DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A59021325BB01A500D20DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 				7A59020E25BB01A500D20DCD /* Assets.xcassets */,
 				7A59021025BB01A500D20DCD /* LaunchScreen.storyboard */,
 				7A59021325BB01A500D20DCD /* Info.plist */,
-				7A59020B25BB01A300D20DCD /* BougsApp_iOS.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -419,7 +416,6 @@
 				7ACF6E7225BBA543005138EF /* TargetsSceneDIContainer.swift in Sources */,
 				7A405C9425BCBE5400C2D753 /* ChannelsListViewController.swift in Sources */,
 				7ACF6E8525BBA815005138EF /* StoryboardInstantiable.swift in Sources */,
-				7A59020D25BB01A300D20DCD /* BougsApp_iOS.xcdatamodeld in Sources */,
 				7A405C8F25BCBD4600C2D753 /* ChannelsListItemCell.swift in Sources */,
 				7A59020325BB01A300D20DCD /* AppDelegate.swift in Sources */,
 				7A52721A25BCE01600FD7D12 /* PlansListItemCell.swift in Sources */,
@@ -541,6 +537,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Debug;
 		};
@@ -596,6 +593,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -858,19 +856,6 @@
 			productName = "BogusApp-Features-CampaignReview";
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		7A59020B25BB01A300D20DCD /* BougsApp_iOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7A59020C25BB01A300D20DCD /* BougsApp_iOS.xcdatamodel */,
-			);
-			currentVersion = 7A59020C25BB01A300D20DCD /* BougsApp_iOS.xcdatamodel */;
-			path = BougsApp_iOS.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7A5901F725BB01A200D20DCD /* Project object */;
 }
