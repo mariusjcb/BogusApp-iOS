@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sO5-f0-Avm">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--TargetsListInterfaceController-->
+        <scene sceneID="IbD-Pz-fUP">
+            <objects>
+                <controller identifier="TargetsListInterfaceController" spacing="10" id="sO5-f0-Avm" customClass="TargetsListInterfaceController" customModule="WatchOS_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" hidden="YES" text="Oups, no data found..." textAlignment="center" numberOfLines="0" id="O2l-Kl-M8m"/>
+                        <label alignment="center" verticalAlignment="center" text="Loading..." id="GCX-XW-PrO"/>
+                        <label width="1" alignment="center" text="Select your options and tap &quot;Next Page&quot;" textAlignment="center" numberOfLines="0" id="dk8-br-ZyI">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <table alignment="left" hidden="YES" id="1eN-f0-HLw">
+                            <items>
+                                <tableRow identifier="TargetsListRowItem" id="bMV-kz-nC0" customClass="TargetsListRowItem" customModule="WatchOS_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="nQx-qp-lli">
+                                        <items>
+                                            <switch width="1" height="1" alignment="left" verticalAlignment="center" title="Switch" numberOfLines="2" minimumScaleFactor="0.0" id="bFH-MF-j0B">
+                                                <connections>
+                                                    <action selector="didChangeSwtichValue" destination="bMV-kz-nC0" id="BSl-qf-yGs"/>
+                                                </connections>
+                                            </switch>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="targetSelectionSwitch" destination="bFH-MF-j0B" id="oEo-ZJ-hUc"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Next Page" id="qkI-Z8-F8V">
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="didTapNextButton" destination="sO5-f0-Avm" id="LxB-TD-Ihc"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="errorLabel" destination="O2l-Kl-M8m" id="pV7-1a-ZKB"/>
+                        <outlet property="loadingLabel" destination="GCX-XW-PrO" id="6Zc-Of-eFn"/>
+                        <outlet property="tableView" destination="1eN-f0-HLw" id="Jlc-nN-18Z"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="226" y="345"/>
+        </scene>
+        <!--ChannelsListInterfaceController-->
+        <scene sceneID="K9n-AN-RrR">
+            <objects>
+                <controller identifier="ChannelsListInterfaceController" spacing="10" id="xXk-xN-jTJ" customClass="ChannelsListInterfaceController" customModule="WatchOS_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" hidden="YES" text="Oups, no data found..." textAlignment="center" numberOfLines="0" id="528-zz-qBY"/>
+                        <label width="1" alignment="center" text="Select a single PLAN for each CHANNEL and tap &quot;Review Plans&quot;." textAlignment="center" numberOfLines="0" id="Urr-Va-vTz">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <table alignment="left" id="d6r-59-yn2">
+                            <items>
+                                <tableRow identifier="ChannelsListRowItem" id="Bik-cd-iBw" customClass="ChannelsListRowItem" customModule="WatchOS_Extension">
+                                    <group key="rootItem" width="1" height="50" alignment="left" layout="vertical" spacing="0.0" id="6cv-Ch-8gE">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Channel Name" id="66u-BC-czL"/>
+                                            <label alignment="left" verticalAlignment="center" text="Montly fee: 300€" id="Ipw-nJ-uK2">
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="channelTitleLabel" destination="66u-BC-czL" id="gTv-K1-Mg1"/>
+                                        <outlet property="selectedPlanLabel" destination="Ipw-nJ-uK2" id="uIa-gb-zOu"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" hidden="YES" title="Next Page" id="dRD-yE-jSL">
+                            <color key="backgroundColor" name="AccentColor"/>
+                        </button>
+                        <button width="1" alignment="left" title="Review Plans" id="4BY-cX-fno">
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="didTapNextButton" destination="xXk-xN-jTJ" id="FVP-N2-dUh"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="emptyLabel" destination="528-zz-qBY" id="TTq-6O-l2S"/>
+                        <outlet property="tableView" destination="d6r-59-yn2" id="DtD-s3-iAn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="524" y="345"/>
+        </scene>
+        <!--PlansListInterfaceController-->
+        <scene sceneID="N6u-xH-WMq">
+            <objects>
+                <controller identifier="PlansListInterfaceController" spacing="10" id="4Kp-Rt-FKZ" customClass="PlansListInterfaceController" customModule="WatchOS_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" hidden="YES" text="Oups, no data found..." textAlignment="center" numberOfLines="0" id="n8p-Ps-c03"/>
+                        <label width="1" alignment="center" textAlignment="center" numberOfLines="0" id="0rS-fA-8C0">
+                            <string key="text">Select a plan.
+Tap a plan to select it.</string>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <label width="1" alignment="center" hidden="YES" text="Select a single PLAN for each CHANNEL and tap &quot;Next Page&quot;." textAlignment="center" numberOfLines="0" id="LFQ-CE-hQ6">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <table alignment="left" id="HSV-bx-zuB">
+                            <items>
+                                <tableRow identifier="PlanListRowItem" id="daG-cf-EMu" customClass="PlanListRowItem" customModule="WatchOS_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="2" id="SkL-mG-7M0">
+                                        <items>
+                                            <label alignment="center" text=" " id="ybd-bi-bEF">
+                                                <fontDescription key="font" type="system" pointSize="5"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="center" text="Channel Name" id="FfQ-99-NZN">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="11"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="center" text="Price" id="IVd-fO-b0P">
+                                                <fontDescription key="font" type="system" weight="black" pointSize="20"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="bottom" text="Label" textAlignment="center" numberOfLines="0" id="6p3-vT-IWg">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="bottom" text=" " id="vnt-cd-gi4">
+                                                <fontDescription key="font" type="system" pointSize="5"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="benefitsLabel" destination="6p3-vT-IWg" id="dPv-2g-Wy3"/>
+                                        <outlet property="channelNameLabel" destination="FfQ-99-NZN" id="cX3-gg-FRG"/>
+                                        <outlet property="priceLabel" destination="IVd-fO-b0P" id="8k3-oA-QyH"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" hidden="YES" title="Next Page" id="Uib-fm-WVy">
+                            <color key="backgroundColor" name="AccentColor"/>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="HSV-bx-zuB" id="tj4-DT-yqv"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="780" y="345"/>
+        </scene>
+        <!--CampaignReviewInterfaceController-->
+        <scene sceneID="sUs-hB-Dmq">
+            <objects>
+                <controller identifier="CampaignReviewInterfaceController" spacing="10" id="fIu-SZ-ERB" customClass="CampaignReviewInterfaceController" customModule="WatchOS_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" hidden="YES" text="Oups, no data found..." textAlignment="center" numberOfLines="0" id="M9I-Nk-ErK"/>
+                        <label width="1" alignment="center" hidden="YES" text="Select a single PLAN for each CHANNEL and tap &quot;Next Page&quot;." textAlignment="center" numberOfLines="0" id="ZiI-3i-DbW">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <label width="1" alignment="center" text="Please review selections and tap &quot;Send Email&quot;" textAlignment="center" numberOfLines="0" id="bi5-fv-XfM">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <label alignment="left" text="Location" minimumScaleFactor="0.0" id="0je-0U-AzH"/>
+                        <button width="1" alignment="left" hidden="YES" title="Next Page" id="1iT-sb-wXP">
+                            <color key="backgroundColor" name="AccentColor"/>
+                        </button>
+                        <table alignment="left" id="WhR-Ht-Ctp">
+                            <items>
+                                <tableRow identifier="PlanListRowItem" id="V8D-VC-ZFQ" customClass="PlanListRowItem" customModule="WatchOS_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="2" id="GFk-55-Jvy">
+                                        <items>
+                                            <label alignment="center" text=" " id="J1O-0M-GjG">
+                                                <fontDescription key="font" type="system" pointSize="5"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="center" text="Channel Name" id="92z-Pd-pUG">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="11"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="center" text="Price" id="JPr-6W-r8w">
+                                                <fontDescription key="font" type="system" weight="black" pointSize="20"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="bottom" text="Label" textAlignment="center" numberOfLines="0" id="Jq8-VU-4cM">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="bottom" text=" " id="TpK-R3-SZj">
+                                                <fontDescription key="font" type="system" pointSize="5"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="benefitsLabel" destination="Jq8-VU-4cM" id="jbZ-gF-uUE"/>
+                                        <outlet property="channelNameLabel" destination="92z-Pd-pUG" id="nZq-qL-019"/>
+                                        <outlet property="priceLabel" destination="JPr-6W-r8w" id="H0P-Ag-GSB"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Send Email" id="LUA-me-7dt">
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="didTapSendButton" destination="fIu-SZ-ERB" id="Hlg-DK-Mwz"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="WhR-Ht-Ctp" id="2lM-2P-O4s"/>
+                        <outlet property="targetsLabel" destination="0je-0U-AzH" id="Bg2-pF-mDf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1031" y="345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

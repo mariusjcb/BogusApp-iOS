@@ -75,6 +75,7 @@ public final class TargetsListViewController: UIViewController, StoryboardInstan
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelectItem(at: indexPath.row)
+        let active = !viewModel.itemsObservable.wrappedValue[indexPath.row].selected
+        viewModel.didSetValue(at: indexPath.row, active: active)
     }
 }

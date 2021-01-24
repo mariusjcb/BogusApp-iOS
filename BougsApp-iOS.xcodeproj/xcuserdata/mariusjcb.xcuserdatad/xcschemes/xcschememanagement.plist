@@ -4,30 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BogusApp-WatchOS (Complication).xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
 		<key>BogusApp-WatchOS (Notification).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
-		</dict>
-		<key>BogusApp-WatchOS.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>BougsApp-iOS copy.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>
-		<key>BougsApp-iOS.xcscheme_^#shared#^_</key>
+		<key>BougsApp.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+		<key>WatchOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -43,6 +40,11 @@
 			<true/>
 		</dict>
 		<key>7A59022225BB01A600D20DCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A6E9D4B25BDE95A001BA5C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

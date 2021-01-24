@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 import MessageUI
 import BogusApp_Common_Models
 import BogusApp_Features_TargetsList
@@ -22,7 +23,7 @@ public protocol TargetsListFlowCoordinatorDependencies {
                                           actions: CampaignReviewViewModelActions) -> CampaignReviewViewController
 }
 
-public final class TargetsListFlowCoordinator {
+public final class TargetsListFlowCoordinator: NSObject, WCSessionDelegate {
     
     private weak var navigationController: UINavigationController?
     private let dependencies: TargetsListFlowCoordinatorDependencies
@@ -32,6 +33,14 @@ public final class TargetsListFlowCoordinator {
     init(navigationController: UINavigationController, dependencies: TargetsListFlowCoordinatorDependencies) {
         self.navigationController = navigationController
         self.dependencies = dependencies
+        
+        super.init()
+        
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
     }
     
     func start() {
@@ -71,4 +80,16 @@ public final class TargetsListFlowCoordinator {
         mail.setMessageBody(message, isHTML: false)
         navigationController?.present(mail, animated: true)
     }
+    
+    // MARK: - WCSessionDelegate
+    public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        guard let destination = message["to"] as? String,
+              let message = message["message"] as? String else { return }
+        sendEmail(destination, message)
+    }
+    
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) { }
+    public func sessionDidBecomeInactive(_ session: WCSession) { }
+    public func sessionDidDeactivate(_ session: WCSession) { }
+    
 }
