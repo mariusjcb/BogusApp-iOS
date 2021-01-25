@@ -7,15 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A405C8125BCB95800C2D753 /* BogusApp-Features-ChannelsList in Frameworks */ = {isa = PBXBuildFile; productRef = 7A405C8025BCB95800C2D753 /* BogusApp-Features-ChannelsList */; };
-		7A405C8A25BCB9F100C2D753 /* ChannelsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A405C8925BCB9F100C2D753 /* ChannelsListViewController.storyboard */; };
-		7A405C8F25BCBD4600C2D753 /* ChannelsListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A405C8E25BCBD4600C2D753 /* ChannelsListItemCell.swift */; };
-		7A405C9425BCBE5400C2D753 /* ChannelsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A405C9325BCBE5400C2D753 /* ChannelsListViewController.swift */; };
-		7A52720425BCD8EB00FD7D12 /* BogusApp-Features-PlansList in Frameworks */ = {isa = PBXBuildFile; productRef = 7A52720325BCD8EB00FD7D12 /* BogusApp-Features-PlansList */; };
-		7A52721025BCD94500FD7D12 /* PlansListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A52720F25BCD94500FD7D12 /* PlansListViewController.storyboard */; };
-		7A52721525BCDFD300FD7D12 /* PlanBenefitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A52721425BCDFD300FD7D12 /* PlanBenefitTableViewCell.swift */; };
-		7A52721A25BCE01600FD7D12 /* PlansListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A52721925BCE01600FD7D12 /* PlansListItemCell.swift */; };
-		7A52722225BCE1F300FD7D12 /* PlansListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A52722125BCE1F300FD7D12 /* PlansListViewController.swift */; };
+		7A541C6525BE178100DB5FC2 /* BogusApp-Common-UIComponents-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 7A541C6425BE178100DB5FC2 /* BogusApp-Common-UIComponents-iOS */; };
+		7A541C6C25BE1EF800DB5FC2 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A541C6B25BE1EF800DB5FC2 /* AppFlowCoordinator.swift */; };
 		7A59020325BB01A300D20DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59020225BB01A300D20DCD /* AppDelegate.swift */; };
 		7A59020525BB01A300D20DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59020425BB01A300D20DCD /* SceneDelegate.swift */; };
 		7A59020F25BB01A500D20DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A59020E25BB01A500D20DCD /* Assets.xcassets */; };
@@ -49,27 +42,6 @@
 		7A6E9E2B25BDEBF7001BA5C4 /* BogusApp-Features-ChannelsList in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6E9E2A25BDEBF7001BA5C4 /* BogusApp-Features-ChannelsList */; };
 		7A6E9E3225BDEBFD001BA5C4 /* BogusApp-Features-PlansList in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6E9E3125BDEBFD001BA5C4 /* BogusApp-Features-PlansList */; };
 		7A6E9E3425BDEC00001BA5C4 /* BogusApp-Features-CampaignReview in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6E9E3325BDEC00001BA5C4 /* BogusApp-Features-CampaignReview */; };
-		7A6F342125BC0CDA001158E7 /* BogusApp-Common-Models in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6F342025BC0CDA001158E7 /* BogusApp-Common-Models */; };
-		7A6F342A25BC0DB4001158E7 /* BogusApp-Common-Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6F342925BC0DB4001158E7 /* BogusApp-Common-Utils */; };
-		7A6F344525BC0E40001158E7 /* BogusApp-Common-Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6F344425BC0E40001158E7 /* BogusApp-Common-Networking */; };
-		7A6F344E25BC107B001158E7 /* BogusApp-Features-TargetsList in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6F344D25BC107B001158E7 /* BogusApp-Features-TargetsList */; };
-		7A6F346F25BC6788001158E7 /* NeumorphicViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F346E25BC6788001158E7 /* NeumorphicViews.swift */; };
-		7A6F347725BC69DE001158E7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F347625BC69DE001158E7 /* UIColor+Extensions.swift */; };
-		7ABCF3C125BD050900C8D6AB /* BogusApp-Features-CampaignReview in Frameworks */ = {isa = PBXBuildFile; productRef = 7ABCF3C025BD050900C8D6AB /* BogusApp-Features-CampaignReview */; };
-		7ABCF3CA25BD05A100C8D6AB /* CampaignReviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABCF3C925BD05A000C8D6AB /* CampaignReviewViewController.storyboard */; };
-		7ABCF3DA25BD069900C8D6AB /* CampaignReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABCF3D925BD069900C8D6AB /* CampaignReviewViewController.swift */; };
-		7ABCF3DF25BD06F000C8D6AB /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABCF3DE25BD06F000C8D6AB /* UICollectionView+Extensions.swift */; };
-		7ABCF3E425BD142E00C8D6AB /* MFMailComposeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABCF3E325BD142E00C8D6AB /* MFMailComposeViewController+Extension.swift */; };
-		7ACF6E5225BB979F005138EF /* TargetsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF6E5125BB979F005138EF /* TargetsListViewController.storyboard */; };
-		7ACF6E5725BB990D005138EF /* TargetsListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF6E5625BB990D005138EF /* TargetsListItemCell.swift */; };
-		7ACF6E5C25BB9B84005138EF /* TargetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF6E5B25BB9B84005138EF /* TargetsListViewController.swift */; };
-		7ACF6E6125BB9D94005138EF /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF6E6025BB9D94005138EF /* Alertable.swift */; };
-		7ACF6E6625BBA327005138EF /* TargetsListFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF6E6525BBA327005138EF /* TargetsListFlowCoordinator.swift */; };
-		7ACF6E7225BBA543005138EF /* TargetsSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF6E7125BBA543005138EF /* TargetsSceneDIContainer.swift */; };
-		7ACF6E8525BBA815005138EF /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF6E8425BBA815005138EF /* StoryboardInstantiable.swift */; };
-		7ACF6E8B25BBA964005138EF /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF6E8A25BBA964005138EF /* AppDIContainer.swift */; };
-		7ACF6E9325BBA972005138EF /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF6E9225BBA972005138EF /* AppConfiguration.swift */; };
-		7ACF6E9B25BBAAF0005138EF /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF6E9A25BBAAF0005138EF /* AppFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,13 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7A405C8925BCB9F100C2D753 /* ChannelsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChannelsListViewController.storyboard; sourceTree = "<group>"; };
-		7A405C8E25BCBD4600C2D753 /* ChannelsListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsListItemCell.swift; sourceTree = "<group>"; };
-		7A405C9325BCBE5400C2D753 /* ChannelsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsListViewController.swift; sourceTree = "<group>"; };
-		7A52720F25BCD94500FD7D12 /* PlansListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlansListViewController.storyboard; sourceTree = "<group>"; };
-		7A52721425BCDFD300FD7D12 /* PlanBenefitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanBenefitTableViewCell.swift; sourceTree = "<group>"; };
-		7A52721925BCE01600FD7D12 /* PlansListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansListItemCell.swift; sourceTree = "<group>"; };
-		7A52722125BCE1F300FD7D12 /* PlansListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansListViewController.swift; sourceTree = "<group>"; };
+		7A541C6B25BE1EF800DB5FC2 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		7A5901FF25BB01A300D20DCD /* BougsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BougsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A59020225BB01A300D20DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A59020425BB01A300D20DCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,8 +137,6 @@
 		7A6E9DFF25BDEBA0001BA5C4 /* PlansListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansListInterfaceController.swift; sourceTree = "<group>"; };
 		7A6E9E0F25BDEBBB001BA5C4 /* PlanListRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListRowItem.swift; sourceTree = "<group>"; };
 		7A6E9E6B25BE0258001BA5C4 /* BougsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BougsApp.entitlements; sourceTree = "<group>"; };
-		7A6F346E25BC6788001158E7 /* NeumorphicViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicViews.swift; sourceTree = "<group>"; };
-		7A6F347625BC69DE001158E7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7A8CF83B25BDDD6300677371 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		7A8CF84125BDDD6400677371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A8CF84325BDDD6400677371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,20 +153,6 @@
 		7A979F1825BDDFAE00ADB680 /* PlanListRowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanListRowItem.swift; sourceTree = "<group>"; };
 		7A979F1925BDDFAE00ADB680 /* PlansListInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansListInterfaceController.swift; sourceTree = "<group>"; };
 		7A979F2325BDDFC200ADB680 /* WKControllerDIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKControllerDIContext.swift; sourceTree = "<group>"; };
-		7ABCF3C925BD05A000C8D6AB /* CampaignReviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CampaignReviewViewController.storyboard; sourceTree = "<group>"; };
-		7ABCF3D925BD069900C8D6AB /* CampaignReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignReviewViewController.swift; sourceTree = "<group>"; };
-		7ABCF3DE25BD06F000C8D6AB /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
-		7ABCF3E325BD142E00C8D6AB /* MFMailComposeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MFMailComposeViewController+Extension.swift"; sourceTree = "<group>"; };
-		7ACF6E5125BB979F005138EF /* TargetsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TargetsListViewController.storyboard; sourceTree = "<group>"; };
-		7ACF6E5625BB990D005138EF /* TargetsListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsListItemCell.swift; sourceTree = "<group>"; };
-		7ACF6E5B25BB9B84005138EF /* TargetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsListViewController.swift; sourceTree = "<group>"; };
-		7ACF6E6025BB9D94005138EF /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
-		7ACF6E6525BBA327005138EF /* TargetsListFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsListFlowCoordinator.swift; sourceTree = "<group>"; };
-		7ACF6E7125BBA543005138EF /* TargetsSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsSceneDIContainer.swift; sourceTree = "<group>"; };
-		7ACF6E8425BBA815005138EF /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
-		7ACF6E8A25BBA964005138EF /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
-		7ACF6E9225BBA972005138EF /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
-		7ACF6E9A25BBAAF0005138EF /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,13 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A52720425BCD8EB00FD7D12 /* BogusApp-Features-PlansList in Frameworks */,
-				7A6F344E25BC107B001158E7 /* BogusApp-Features-TargetsList in Frameworks */,
-				7ABCF3C125BD050900C8D6AB /* BogusApp-Features-CampaignReview in Frameworks */,
-				7A6F344525BC0E40001158E7 /* BogusApp-Common-Networking in Frameworks */,
-				7A6F342A25BC0DB4001158E7 /* BogusApp-Common-Utils in Frameworks */,
-				7A6F342125BC0CDA001158E7 /* BogusApp-Common-Models in Frameworks */,
-				7A405C8125BCB95800C2D753 /* BogusApp-Features-ChannelsList in Frameworks */,
+				7A541C6525BE178100DB5FC2 /* BogusApp-Common-UIComponents-iOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,50 +195,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A405C8825BCB9DE00C2D753 /* ChannelsList */ = {
-			isa = PBXGroup;
-			children = (
-				7A405C8925BCB9F100C2D753 /* ChannelsListViewController.storyboard */,
-				7A405C8E25BCBD4600C2D753 /* ChannelsListItemCell.swift */,
-				7A405C9325BCBE5400C2D753 /* ChannelsListViewController.swift */,
-			);
-			path = ChannelsList;
-			sourceTree = "<group>";
-		};
-		7A4C603525BB029400573D38 /* TargetsList */ = {
-			isa = PBXGroup;
-			children = (
-				7ACF6E5125BB979F005138EF /* TargetsListViewController.storyboard */,
-				7ACF6E5625BB990D005138EF /* TargetsListItemCell.swift */,
-				7ACF6E5B25BB9B84005138EF /* TargetsListViewController.swift */,
-			);
-			path = TargetsList;
-			sourceTree = "<group>";
-		};
-		7A4C604D25BB04D900573D38 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				7ACF6E6025BB9D94005138EF /* Alertable.swift */,
-				7ACF6E8425BBA815005138EF /* StoryboardInstantiable.swift */,
-				7A6F346E25BC6788001158E7 /* NeumorphicViews.swift */,
-				7A6F347625BC69DE001158E7 /* UIColor+Extensions.swift */,
-				7ABCF3DE25BD06F000C8D6AB /* UICollectionView+Extensions.swift */,
-				7ABCF3E325BD142E00C8D6AB /* MFMailComposeViewController+Extension.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		7A52720B25BCD92700FD7D12 /* PlansList */ = {
-			isa = PBXGroup;
-			children = (
-				7A52720F25BCD94500FD7D12 /* PlansListViewController.storyboard */,
-				7A52721925BCE01600FD7D12 /* PlansListItemCell.swift */,
-				7A52721425BCDFD300FD7D12 /* PlanBenefitTableViewCell.swift */,
-				7A52722125BCE1F300FD7D12 /* PlansListViewController.swift */,
-			);
-			path = PlansList;
-			sourceTree = "<group>";
-		};
 		7A5901F625BB01A200D20DCD = {
 			isa = PBXGroup;
 			children = (
@@ -325,12 +225,7 @@
 		7A59020125BB01A300D20DCD /* BougsApp-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7ACF6E8925BBA94C005138EF /* Application */,
-				7ABCF3C825BD058600C8D6AB /* CampaignReview */,
-				7A52720B25BCD92700FD7D12 /* PlansList */,
-				7A405C8825BCB9DE00C2D753 /* ChannelsList */,
-				7A4C603525BB029400573D38 /* TargetsList */,
-				7A4C604D25BB04D900573D38 /* Utils */,
+				7A541C6B25BE1EF800DB5FC2 /* AppFlowCoordinator.swift */,
 				7A6F341825BC0C3D001158E7 /* Supporting Files */,
 			);
 			path = "BougsApp-iOS";
@@ -526,27 +421,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7ABCF3C825BD058600C8D6AB /* CampaignReview */ = {
-			isa = PBXGroup;
-			children = (
-				7ABCF3C925BD05A000C8D6AB /* CampaignReviewViewController.storyboard */,
-				7ABCF3D925BD069900C8D6AB /* CampaignReviewViewController.swift */,
-			);
-			path = CampaignReview;
-			sourceTree = "<group>";
-		};
-		7ACF6E8925BBA94C005138EF /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				7ACF6E9225BBA972005138EF /* AppConfiguration.swift */,
-				7ACF6E8A25BBA964005138EF /* AppDIContainer.swift */,
-				7ACF6E9A25BBAAF0005138EF /* AppFlowCoordinator.swift */,
-				7ACF6E7125BBA543005138EF /* TargetsSceneDIContainer.swift */,
-				7ACF6E6525BBA327005138EF /* TargetsListFlowCoordinator.swift */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -566,13 +440,7 @@
 			);
 			name = BougsApp;
 			packageProductDependencies = (
-				7A6F342025BC0CDA001158E7 /* BogusApp-Common-Models */,
-				7A6F342925BC0DB4001158E7 /* BogusApp-Common-Utils */,
-				7A6F344425BC0E40001158E7 /* BogusApp-Common-Networking */,
-				7A6F344D25BC107B001158E7 /* BogusApp-Features-TargetsList */,
-				7A405C8025BCB95800C2D753 /* BogusApp-Features-ChannelsList */,
-				7A52720325BCD8EB00FD7D12 /* BogusApp-Features-PlansList */,
-				7ABCF3C025BD050900C8D6AB /* BogusApp-Features-CampaignReview */,
+				7A541C6425BE178100DB5FC2 /* BogusApp-Common-UIComponents-iOS */,
 			);
 			productName = "BougsApp-iOS";
 			productReference = 7A5901FF25BB01A300D20DCD /* BougsApp.app */;
@@ -702,6 +570,7 @@
 				7A405C7F25BCB95800C2D753 /* XCRemoteSwiftPackageReference "BogusApp-Features-ChannelsList" */,
 				7A52720225BCD8EB00FD7D12 /* XCRemoteSwiftPackageReference "BogusApp-Features-PlansList" */,
 				7ABCF3BF25BD050900C8D6AB /* XCRemoteSwiftPackageReference "BogusApp-Features-CampaignReview" */,
+				7A6E9EBD25BE097C001BA5C4 /* XCRemoteSwiftPackageReference "BogusApp-Common-UIComponents" */,
 			);
 			productRefGroup = 7A59020025BB01A300D20DCD /* Products */;
 			projectDirPath = "";
@@ -721,12 +590,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ACF6E5225BB979F005138EF /* TargetsListViewController.storyboard in Resources */,
-				7ABCF3CA25BD05A100C8D6AB /* CampaignReviewViewController.storyboard in Resources */,
-				7A52721025BCD94500FD7D12 /* PlansListViewController.storyboard in Resources */,
 				7A59021225BB01A500D20DCD /* LaunchScreen.storyboard in Resources */,
 				7A59020F25BB01A500D20DCD /* Assets.xcassets in Resources */,
-				7A405C8A25BCB9F100C2D753 /* ChannelsListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,27 +633,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ACF6E8B25BBA964005138EF /* AppDIContainer.swift in Sources */,
-				7ACF6E7225BBA543005138EF /* TargetsSceneDIContainer.swift in Sources */,
-				7A405C9425BCBE5400C2D753 /* ChannelsListViewController.swift in Sources */,
-				7ACF6E8525BBA815005138EF /* StoryboardInstantiable.swift in Sources */,
-				7A405C8F25BCBD4600C2D753 /* ChannelsListItemCell.swift in Sources */,
 				7A59020325BB01A300D20DCD /* AppDelegate.swift in Sources */,
-				7A52721A25BCE01600FD7D12 /* PlansListItemCell.swift in Sources */,
-				7ACF6E5725BB990D005138EF /* TargetsListItemCell.swift in Sources */,
-				7ACF6E9325BBA972005138EF /* AppConfiguration.swift in Sources */,
-				7A6F346F25BC6788001158E7 /* NeumorphicViews.swift in Sources */,
-				7ABCF3E425BD142E00C8D6AB /* MFMailComposeViewController+Extension.swift in Sources */,
-				7ACF6E9B25BBAAF0005138EF /* AppFlowCoordinator.swift in Sources */,
+				7A541C6C25BE1EF800DB5FC2 /* AppFlowCoordinator.swift in Sources */,
 				7A59020525BB01A300D20DCD /* SceneDelegate.swift in Sources */,
-				7A52721525BCDFD300FD7D12 /* PlanBenefitTableViewCell.swift in Sources */,
-				7ABCF3DF25BD06F000C8D6AB /* UICollectionView+Extensions.swift in Sources */,
-				7ACF6E6125BB9D94005138EF /* Alertable.swift in Sources */,
-				7A52722225BCE1F300FD7D12 /* PlansListViewController.swift in Sources */,
-				7A6F347725BC69DE001158E7 /* UIColor+Extensions.swift in Sources */,
-				7ACF6E6625BBA327005138EF /* TargetsListFlowCoordinator.swift in Sources */,
-				7ABCF3DA25BD069900C8D6AB /* CampaignReviewViewController.swift in Sources */,
-				7ACF6E5C25BB9B84005138EF /* TargetsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1274,6 +1121,14 @@
 				kind = branch;
 			};
 		};
+		7A6E9EBD25BE097C001BA5C4 /* XCRemoteSwiftPackageReference "BogusApp-Common-UIComponents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "file:///Users/mariusjcb/Developer/BogusApp/Common/BogusApp-Common-UIComponents";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		7A6F341F25BC0CDA001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Common-Models" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "../Common/BogusApp-Common-Models";
@@ -1317,15 +1172,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7A405C8025BCB95800C2D753 /* BogusApp-Features-ChannelsList */ = {
+		7A541C6425BE178100DB5FC2 /* BogusApp-Common-UIComponents-iOS */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7A405C7F25BCB95800C2D753 /* XCRemoteSwiftPackageReference "BogusApp-Features-ChannelsList" */;
-			productName = "BogusApp-Features-ChannelsList";
-		};
-		7A52720325BCD8EB00FD7D12 /* BogusApp-Features-PlansList */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A52720225BCD8EB00FD7D12 /* XCRemoteSwiftPackageReference "BogusApp-Features-PlansList" */;
-			productName = "BogusApp-Features-PlansList";
+			productName = "BogusApp-Common-UIComponents-iOS";
 		};
 		7A6E9E1D25BDEBE7001BA5C4 /* BogusApp-Common-Models */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1353,31 +1202,6 @@
 		};
 		7A6E9E3325BDEC00001BA5C4 /* BogusApp-Features-CampaignReview */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = "BogusApp-Features-CampaignReview";
-		};
-		7A6F342025BC0CDA001158E7 /* BogusApp-Common-Models */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A6F341F25BC0CDA001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Common-Models" */;
-			productName = "BogusApp-Common-Models";
-		};
-		7A6F342925BC0DB4001158E7 /* BogusApp-Common-Utils */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A6F342825BC0DB4001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Common-Utils" */;
-			productName = "BogusApp-Common-Utils";
-		};
-		7A6F344425BC0E40001158E7 /* BogusApp-Common-Networking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A6F344325BC0E40001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Common-Networking" */;
-			productName = "BogusApp-Common-Networking";
-		};
-		7A6F344D25BC107B001158E7 /* BogusApp-Features-TargetsList */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A6F344C25BC107B001158E7 /* XCRemoteSwiftPackageReference "BogusApp-Features-TargetsList" */;
-			productName = "BogusApp-Features-TargetsList";
-		};
-		7ABCF3C025BD050900C8D6AB /* BogusApp-Features-CampaignReview */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7ABCF3BF25BD050900C8D6AB /* XCRemoteSwiftPackageReference "BogusApp-Features-CampaignReview" */;
 			productName = "BogusApp-Features-CampaignReview";
 		};
 /* End XCSwiftPackageProductDependency section */

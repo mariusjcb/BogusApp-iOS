@@ -6,11 +6,12 @@
 //
 
 import UIKit
-import WatchConnectivity
+import BogusApp_Common_UIComponents_iOS
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        AppResourcesBundle.configure()
         return true
     }
 

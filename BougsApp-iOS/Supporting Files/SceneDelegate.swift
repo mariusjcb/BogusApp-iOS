@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import BogusApp_Common_UIComponents
+import BogusApp_Common_UIComponents_iOS
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
+        navigationController.navigationBar.prefersLargeTitles = true
         window?.rootViewController = navigationController
         
         appFlowCoordinator = AppFlowCoordinator(navigationController: navigationController,

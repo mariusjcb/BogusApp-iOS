@@ -62,5 +62,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+		<false/>
+	</dict>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>For sending emails</string>
+    <key>NSBonjourServices</key>
+    <array>
+        <string>MailService._tcp</string>
+        <string>MailService._udp</string>
+    </array>
 </dict>
 </plist>
