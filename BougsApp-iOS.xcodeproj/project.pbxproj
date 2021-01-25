@@ -340,6 +340,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A59022C25BB01A600D20DCD /* Build configuration list for PBXNativeTarget "BougsApp" */;
 			buildPhases = (
+				7ABA1D2C25BE5D0B00DBA55C /* SwiftLint */,
 				7A5901FB25BB01A200D20DCD /* Sources */,
 				7A5901FC25BB01A200D20DCD /* Frameworks */,
 				7A5901FD25BB01A200D20DCD /* Resources */,
@@ -415,6 +416,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A6E9D6C25BDE95C001BA5C4 /* Build configuration list for PBXNativeTarget "WatchOS Extension" */;
 			buildPhases = (
+				7ABA1D2625BE5D0000DBA55C /* SwiftLint */,
 				7A6E9D5425BDE95B001BA5C4 /* Sources */,
 				7A6E9D5525BDE95B001BA5C4 /* Frameworks */,
 				7A6E9D5625BDE95B001BA5C4 /* Resources */,
@@ -539,6 +541,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7ABA1D2625BE5D0000DBA55C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint \nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		7ABA1D2C25BE5D0B00DBA55C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint \nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A5901FB25BB01A200D20DCD /* Sources */ = {

@@ -14,7 +14,7 @@ protocol WKControllerDIContext: class {
 
 class DefaultControllerContext<ViewModel>: WKControllerDIContext {
     var viewModel: ViewModel
-    
+
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
     }

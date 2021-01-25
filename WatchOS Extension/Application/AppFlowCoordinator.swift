@@ -10,7 +10,7 @@ import Foundation
 final class AppFlowCoordinator {
 
     private let appDIContainer: AppDIContainer
-    
+
     init(appDIContainer: AppDIContainer) {
         self.appDIContainer = appDIContainer
     }

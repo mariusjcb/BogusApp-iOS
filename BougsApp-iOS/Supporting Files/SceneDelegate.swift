@@ -16,19 +16,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let appDIContainer = AppDIContainer()
     var appFlowCoordinator: AppFlowCoordinator?
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene,
+               willConnectTo session: UISceneSession,
+               options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
         window?.rootViewController = navigationController
-        
+
         appFlowCoordinator = AppFlowCoordinator(navigationController: navigationController,
                                                 appDIContainer: appDIContainer)
         appFlowCoordinator?.start()
-        
+
         window?.makeKeyAndVisible()
     }
-    
-}
 
+}

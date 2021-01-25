@@ -13,7 +13,7 @@ public final class AppFlowCoordinator {
 
     var navigationController: UINavigationController
     private let appDIContainer: AppDIContainer
-    
+
     public init(navigationController: UINavigationController, appDIContainer: AppDIContainer) {
         self.navigationController = navigationController
         self.appDIContainer = appDIContainer
