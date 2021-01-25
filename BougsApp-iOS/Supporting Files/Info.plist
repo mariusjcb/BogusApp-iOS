@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>API_BASE_URL</key>
-	<string>http://192.168.100.115:8180</string>
+	<string>http://iliemarius.ro:8180</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -69,12 +69,12 @@
 		<key>NSTemporaryExceptionRequiresForwardSecrecy</key>
 		<false/>
 	</dict>
-    <key>NSLocalNetworkUsageDescription</key>
-    <string>For sending emails</string>
-    <key>NSBonjourServices</key>
-    <array>
-        <string>MailService._tcp</string>
-        <string>MailService._udp</string>
-    </array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>For sending emails</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>MailService._tcp</string>
+		<string>MailService._udp</string>
+	</array>
 </dict>
 </plist>
