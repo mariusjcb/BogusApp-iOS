@@ -16,7 +16,7 @@ import BogusApp_Features_CampaignReview
 final class TargetsSceneDIContainer {
 
     struct Dependencies {
-        let apiDataTransferService: DataTransferService
+        let networkService: NetworkService
     }
 
     private let dependencies: Dependencies
@@ -32,7 +32,7 @@ final class TargetsSceneDIContainer {
 
     // MARK: - Repositories
     func makeTargetsRepository() -> TargetsRepository {
-        return DefaultTargetsRepository(targetsService: dependencies.apiDataTransferService,
+        return DefaultTargetsRepository(targetsService: dependencies.networkService,
                                         endpointsProvider: DefaultTargetsEndpointProvider())
     }
 

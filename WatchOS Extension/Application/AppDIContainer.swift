@@ -13,15 +13,14 @@ final class AppDIContainer {
     lazy var appConfiguration = AppConfiguration()
 
     // MARK: - Network
-    lazy var dataTransferService: DataTransferService = {
+    lazy var dataTransferService: NetworkService = {
         let config = DefaultNetworkConfiguration(baseURL: URL(string: appConfiguration.baseURL)!)
-        let apiDataNetwork = DefaultNetworkService(config: config)
-        return DefaultDataTransferService(with: apiDataNetwork)
+        return DefaultNetworkService(config: config)
     }()
 
     // MARK: - DIContainers of scenes
     func makeTargetsSceneDIContainer() -> TargetsSceneDIContainer {
-        let dependencies = TargetsSceneDIContainer.Dependencies(apiDataTransferService: dataTransferService)
+        let dependencies = TargetsSceneDIContainer.Dependencies(networkService: dataTransferService)
         return TargetsSceneDIContainer(dependencies: dependencies)
     }
 }
